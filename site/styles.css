@@ -337,6 +337,20 @@ a:focus-visible {
   display: block;
 }
 
+#hero-preview.is-changing {
+  animation: hero-preview-in 240ms ease-out;
+}
+
+@keyframes hero-preview-in {
+  from {
+    opacity: 0.15;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 .preview-caption {
   margin: 22px 0 0;
   color: var(--muted);
@@ -996,6 +1010,8 @@ h2 {
   *,
   *::before,
   *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
 }

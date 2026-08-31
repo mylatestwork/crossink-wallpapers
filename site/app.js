@@ -1,12 +1,15 @@
 const state = {
   catalog: null,
-  mode: "custom",
+  mode: "page-overlay",
   query: "",
+  heroSlideTimer: null,
   lastHeroAsset: {
     custom: null,
     "page-overlay": null,
   },
 };
+
+const HERO_SLIDE_INTERVAL_MS = 5000;
 
 const modeLabels = {
   custom: "Custom",
@@ -48,6 +51,52 @@ function randomHeroAsset(mode) {
   const asset = pool[Math.floor(Math.random() * pool.length)];
   state.lastHeroAsset[mode] = asset.number;
   return asset;
+}
+
+function nextHeroAsset(mode) {
+  const assets = assetsForMode(mode);
+  if (assets.length === 0) return null;
+  const currentIndex = assets.findIndex((asset) => asset.number === state.lastHeroAsset[mode]);
+  const asset = assets[(currentIndex + 1) % assets.length];
+  state.lastHeroAsset[mode] = asset.number;
+  return asset;
+}
+
+function showHeroAsset(asset, mode) {
+  if (!asset) return;
+
+  const preview = document.querySelector("#hero-preview");
+  const screen = document.querySelector("#hero-screen");
+  screen.className = `device-screen mode-${mode}`;
+  preview.classList.remove("is-changing");
+  void preview.offsetWidth;
+  preview.src = asset.previewUrl;
+  preview.alt = `${asset.label} ${modeLabels[mode]} preview`;
+  preview.classList.add("is-changing");
+  document.querySelector("#preview-mode-label").textContent = modeLabels[mode];
+  document.querySelector("#preview-behavior").textContent = mode === "custom"
+    ? "slideshow · random on every sleep"
+    : "slideshow · the last page stays visible";
+}
+
+function showRandomHeroAsset(mode = state.mode) {
+  showHeroAsset(randomHeroAsset(mode), mode);
+}
+
+function showNextHeroAsset(mode = state.mode) {
+  showHeroAsset(nextHeroAsset(mode), mode);
+}
+
+function restartHeroSlideshow() {
+  window.clearInterval(state.heroSlideTimer);
+  if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) return;
+
+  state.heroSlideTimer = window.setInterval(() => {
+    const dialog = document.querySelector("#preview-dialog");
+    if (document.visibilityState === "visible" && !dialog.open) {
+      showNextHeroAsset();
+    }
+  }, HERO_SLIDE_INTERVAL_MS);
 }
 
 function pageSample() {
@@ -135,7 +184,7 @@ function renderPacks() {
   }
 
   document.querySelector("#collection-summary").textContent =
-    `${fileCount} ready-to-use files across ${collectionCount} collections for ${state.catalog.collection.devices.join(" and ")}.`;
+    `${fileCount} ready-to-use files across ${collectionCount} ${collectionCount === 1 ? "collection" : "collections"} for ${state.catalog.collection.devices.join(" and ")}.`;
 }
 
 function openPreview(asset) {
@@ -202,19 +251,10 @@ function setMode(mode) {
     button.setAttribute("aria-pressed", String(active));
   });
 
-  const firstAsset = randomHeroAsset(mode);
-  if (!firstAsset) return;
-  const preview = document.querySelector("#hero-preview");
-  const screen = document.querySelector("#hero-screen");
-  screen.className = `device-screen mode-${mode}`;
-  preview.src = firstAsset.previewUrl;
-  preview.alt = `${firstAsset.label} ${modeLabels[mode]} preview`;
-  document.querySelector("#preview-mode-label").textContent = modeLabels[mode];
-  document.querySelector("#preview-behavior").textContent = mode === "custom"
-    ? "random on every sleep"
-    : "the last page stays visible";
+  showRandomHeroAsset(mode);
   document.querySelector("#artwork-search").placeholder = `Search ${modeLabels[mode]}`;
   renderAssets();
+  restartHeroSlideshow();
 }
 
 function bindEvents() {
