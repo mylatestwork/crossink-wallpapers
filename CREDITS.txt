@@ -1,0 +1,29 @@
+CrossInk Wallpapers — artwork credits
+
+Project creator
+My Latest Work
+https://mylatestwork.net/
+
+Released artwork and repository-specific preview artwork
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+https://creativecommons.org/licenses/by/4.0/
+
+Source artwork
+Shapes, Symbols & Icons - Vol. 1 by Counterfeit
+https://www.figma.com/community/file/1219674796615198415/shapes-symbols-icons-vol-1
+
+Shapes, Symbols & Icons - Vol. 2 by Counterfeit
+https://www.figma.com/community/file/1446631459390076153/shapes-symbols-icons-vol-2
+
+Both Counterfeit source files are licensed under Creative Commons Attribution
+4.0 International (CC BY 4.0):
+https://creativecommons.org/licenses/by/4.0/
+
+Changes include selecting shapes, resizing and repositioning them, recoloring
+them, converting them into monochrome masks, and exporting them as 480 x 800
+CrossInk Custom BMP and Page Overlay PNG assets.
+
+CrossInk Wallpapers is an unofficial community project and is not affiliated
+with or endorsed by CrossInk, CrossPoint Reader, or Xteink.
+
+The official CrossInk logo is not included in the CC BY license grant above.

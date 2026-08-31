@@ -1,0 +1,28 @@
+Artwork attribution and license status
+
+The released artwork includes adaptations of the following works by Counterfeit:
+
+- Shapes, Symbols & Icons - Vol. 1
+  https://www.figma.com/community/file/1219674796615198415/shapes-symbols-icons-vol-1
+- Shapes, Symbols & Icons - Vol. 2
+  https://www.figma.com/community/file/1446631459390076153/shapes-symbols-icons-vol-2
+
+Both source works are licensed under Creative Commons Attribution 4.0
+International (CC BY 4.0):
+https://creativecommons.org/licenses/by/4.0/
+
+Changes include selecting shapes, resizing and repositioning them, recoloring
+them, converting them into monochrome masks, and exporting 480 x 800 CrossInk
+Custom BMP and Page Overlay PNG assets.
+
+The released wallpaper artwork in assets/x4/ and source/custom-png/, including
+repository-specific artwork and adaptations, is licensed by My Latest Work
+under Creative Commons Attribution 4.0 International (CC BY 4.0):
+https://creativecommons.org/licenses/by/4.0/
+
+Repository-specific device and preview artwork in site/media/ is also licensed
+by My Latest Work under CC BY 4.0, except for the official CrossInk logo.
+
+The CrossInk name and official logo belong to the CrossInk project and are not
+covered by the Counterfeit credit, CC BY license grant above, or the
+repository's code license.

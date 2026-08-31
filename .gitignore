@@ -1,0 +1,8 @@
+.DS_Store
+dist/
+site-dist/
+__pycache__/
+*.pyc
+source/CrossInk-Page-Overlays.fig
+source/mockup-reference/
+source/unpaired/

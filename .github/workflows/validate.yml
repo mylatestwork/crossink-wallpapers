@@ -1,0 +1,20 @@
+name: Validate assets
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Validate source assets
+        run: python3 scripts/release.py check
+      - name: Build release archives
+        run: python3 scripts/release.py build
+      - name: Upload release candidates
+        uses: actions/upload-artifact@v7
+        with:
+          name: crossink-sleep-screens
+          path: dist/

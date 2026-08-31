@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "collection": {
+    "title": "CrossInk Wallpapers",
+    "description": "Custom sleep screens and transparent page overlays made for CrossInk on the Xteink X4 and X4 Pro.",
+    "devices": ["Xteink X4", "Xteink X4 Pro"],
+    "resolution": "480 × 800",
+    "assetLicense": "My Latest Work · CC BY 4.0 · source shapes by Counterfeit"
+  },
+  "assetNames": {
+    "custom": {
+      "001": "World",
+      "002": "Ratio",
+      "003": "Bloom",
+      "004": "Burst",
+      "005": "Tape",
+      "006": "Sprinkles",
+      "007": "Halo",
+      "008": "Spin",
+      "009": "Split",
+      "010": "Trio",
+      "011": "Compass",
+      "012": "Delta"
+    },
+    "page-overlay": {
+      "001": "World",
+      "002": "Star",
+      "003": "Reactor",
+      "004": "Spark",
+      "005": "Trident",
+      "006": "Plus",
+      "007": "Portal",
+      "008": "Pinwheel",
+      "009": "Arch",
+      "010": "Ripple",
+      "011": "Bubble",
+      "012": "Clover"
+    }
+  },
+  "packs": [
+    {
+      "id": "minimal-symbols-vol-01",
+      "title": "Minimal Symbols — Volume 01",
+      "eyebrow": "Two collections",
+      "description": "Two high-contrast collections of geometric marks and quiet symbols, prepared separately for Custom and Page Overlay mode.",
+      "tags": ["Minimal", "Symbols", "Monochrome"],
+      "modes": {
+        "custom": {
+          "archive": "CrossInk-Custom-X4.zip",
+          "eyebrow": "Custom · Volume 01",
+          "title": "Custom Sleep Screens",
+          "description": "Full-screen BMP artwork that replaces the page while the reader sleeps."
+        },
+        "page-overlay": {
+          "archive": "CrossInk-Page-Overlays-X4.zip",
+          "eyebrow": "Page Overlay · Volume 01",
+          "title": "Page Overlays",
+          "description": "Transparent PNG artwork that lets the last-read page remain visible."
+        }
+      }
+    }
+  ]
+}
