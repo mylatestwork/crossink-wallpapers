@@ -3,6 +3,7 @@ const state = {
   mode: "page-overlay",
   query: "",
   heroSlideTimer: null,
+  heroTransitionId: 0,
   lastHeroAsset: {
     custom: null,
     "page-overlay": null,
@@ -10,6 +11,8 @@ const state = {
 };
 
 const HERO_SLIDE_INTERVAL_MS = 5000;
+const HERO_INK_DURATION_MS = 650;
+const HERO_OVERLAY_PAUSE_MS = 900;
 
 const modeLabels = {
   custom: "Custom",
@@ -62,21 +65,62 @@ function nextHeroAsset(mode) {
   return asset;
 }
 
-function showHeroAsset(asset, mode) {
+function wait(milliseconds) {
+  return new Promise((resolve) => window.setTimeout(resolve, milliseconds));
+}
+
+async function showHeroAsset(asset, mode) {
   if (!asset) return;
 
+  const transitionId = ++state.heroTransitionId;
   const preview = document.querySelector("#hero-preview");
   const screen = document.querySelector("#hero-screen");
-  screen.className = `device-screen mode-${mode}`;
-  preview.classList.remove("is-changing");
-  void preview.offsetWidth;
-  preview.src = asset.previewUrl;
-  preview.alt = `${asset.label} ${modeLabels[mode]} preview`;
-  preview.classList.add("is-changing");
   document.querySelector("#preview-mode-label").textContent = modeLabels[mode];
   document.querySelector("#preview-behavior").textContent = mode === "custom"
     ? "slideshow · random on every sleep"
     : "slideshow · the last page stays visible";
+
+  const applyAsset = () => {
+    screen.className = `device-screen mode-${mode}`;
+    preview.src = asset.previewUrl;
+    preview.alt = `${asset.label} ${modeLabels[mode]} preview`;
+  };
+
+  if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) {
+    preview.classList.remove("is-inking-in", "is-inking-out", "is-ink-hidden");
+    applyAsset();
+    return;
+  }
+
+  const alreadyHidden = preview.classList.contains("is-ink-hidden");
+  preview.classList.remove("is-inking-in", "is-inking-out");
+
+  if (!alreadyHidden) {
+    void preview.offsetWidth;
+    preview.classList.add("is-inking-out");
+    await wait(HERO_INK_DURATION_MS);
+    if (transitionId !== state.heroTransitionId) return;
+  }
+
+  preview.classList.remove("is-inking-in", "is-inking-out");
+  preview.classList.add("is-ink-hidden");
+  applyAsset();
+
+  const imageReady = preview.decode?.().catch(() => undefined) || Promise.resolve();
+  const textOnlyPause = mode === "page-overlay"
+    ? wait(HERO_OVERLAY_PAUSE_MS)
+    : Promise.resolve();
+  await Promise.all([imageReady, textOnlyPause]);
+  if (transitionId !== state.heroTransitionId) return;
+
+  preview.classList.remove("is-ink-hidden");
+  void preview.offsetWidth;
+  preview.classList.add("is-inking-in");
+  await wait(HERO_INK_DURATION_MS);
+
+  if (transitionId === state.heroTransitionId) {
+    preview.classList.remove("is-inking-in");
+  }
 }
 
 function showRandomHeroAsset(mode = state.mode) {
@@ -103,7 +147,7 @@ function pageSample() {
   const sample = element("div", "page-sample");
   sample.setAttribute("aria-hidden", "true");
   const image = element("img");
-  image.src = "./media/book-page.png";
+  image.src = "./media/book-page.png?v=2";
   image.alt = "";
   image.loading = "lazy";
   image.decoding = "async";

@@ -337,13 +337,31 @@ a:focus-visible {
   display: block;
 }
 
-#hero-preview.is-changing {
-  animation: hero-preview-in 240ms ease-out;
+#hero-preview.is-inking-out {
+  animation: hero-ink-out 650ms steps(4, end) both;
 }
 
-@keyframes hero-preview-in {
+#hero-preview.is-inking-in {
+  animation: hero-ink-in 650ms steps(4, end) both;
+}
+
+#hero-preview.is-ink-hidden {
+  opacity: 0;
+}
+
+@keyframes hero-ink-out {
   from {
-    opacity: 0.15;
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes hero-ink-in {
+  from {
+    opacity: 0;
   }
 
   to {
