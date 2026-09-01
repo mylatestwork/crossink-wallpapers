@@ -2,7 +2,7 @@
 
 **[Open the gallery →](https://mylatestwork.github.io/crossink-wallpapers/)**
 
-![CrossInk Wallpapers — Sleep screens and Page Overlays.](site/media/social-preview.png)
+![CrossInk Wallpapers — Sleep screens and Page Overlays.](site/media/social-preview-overlay.png)
 
 I’m building this growing collection for the quiet moment after the last page.
 

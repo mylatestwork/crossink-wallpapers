@@ -26,7 +26,7 @@
 ## Branding
 
 - `site/media/crossink-logo.png`
-- `site/media/social-preview.png`
+- `site/media/social-preview-overlay.png`
 - Official CrossInk logo downloaded from [crossink.dev/logo.png](https://crossink.dev/logo.png) on 31 August 2026 and used in the gallery header and favicon.
 - Social preview created for the CrossInk Wallpapers gallery on 31 August 2026 and exported at 1200 × 630 px.
 - CrossInk and its logo belong to the CrossInk project; their inclusion does not imply affiliation or endorsement.

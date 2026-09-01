@@ -181,7 +181,7 @@ def validate_output(catalog: dict) -> None:
         "./media/book-page.png",
         "./media/crossink-logo.png",
         "./media/device.png",
-        "./media/social-preview.png",
+        "./media/social-preview-overlay.png",
     }
     for pack in catalog["packs"]:
         for mode in pack["modes"].values():
