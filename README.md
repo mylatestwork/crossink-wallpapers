@@ -1,14 +1,16 @@
 # CrossInk Wallpapers
 
-![CrossInk Wallpapers — Minimal symbols. Quiet screens.](site/media/social-preview.png)
+![CrossInk Wallpapers — a small collection made for quiet pages.](site/media/social-preview.png)
 
-Custom sleep screens and transparent page overlays for CrossInk on the Xteink X4 and X4 Pro.
+I made this small collection for the quiet moment after the last page.
 
-The artwork is designed at the native portrait resolution of **480 × 800 px**. Final transparent Custom PNG masters are preserved in [`source/custom-png`](source/custom-png); the published Custom files are flattened onto white and exported as uncompressed 24-bit BMPs.
+Twelve minimal symbols, prepared for CrossInk in two formats: full-screen Custom sleep screens and transparent Page Overlays. Both fit the Xteink X4 and X4 Pro at their native **480 × 800 px** resolution.
 
-The repository also contains a dependency-free static gallery for previewing every design, switching between Custom and Page Overlay, downloading individual files, and downloading the complete ready-to-copy ZIP packs.
+Browse every design in the lightweight gallery, or download a ready-to-copy ZIP and go straight back to reading.
 
-Created by [My Latest Work](https://mylatestwork.net/).
+Made by [My Latest Work](https://mylatestwork.net/).
+
+Final transparent Custom PNG masters are preserved in [`source/custom-png`](source/custom-png); the published Custom files are flattened onto white and exported as uncompressed 24-bit BMPs.
 
 Each mode is numbered independently. Descriptive filenames such as `custom-001-world.bmp` and `overlay-002-star.png` keep the gallery, individual downloads, and ZIP contents easy to identify. Matching numbers do not generally indicate matching motifs. The current release keeps both collections at the same consecutive, even file count.
 
