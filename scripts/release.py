@@ -85,9 +85,9 @@ def inspect_bmp(path: Path) -> AssetInfo:
     validate_dimensions(path, width, height)
     if planes != 1:
         raise ValidationError(f"{path.relative_to(ROOT)} has {planes} BMP planes; expected 1")
-    if bits_per_pixel not in {1, 4, 8, 24}:
+    if bits_per_pixel != 1:
         raise ValidationError(
-            f"{path.relative_to(ROOT)} uses unsupported {bits_per_pixel}-bit custom BMP"
+            f"{path.relative_to(ROOT)} uses {bits_per_pixel}-bit BMP; expected 1-bit"
         )
     if compression != 0:
         raise ValidationError(
@@ -221,16 +221,16 @@ def zip_text(archive: zipfile.ZipFile, destination: str, contents: str) -> None:
 def build_archive(filename: str, source_dir: Path, mode: str) -> Path:
     destination = DIST_DIR / filename
     install = (
-        "CrossInk X4/X4 Pro sleep-screen pack\n\n"
+        "CrossInk Wallpapers for X4 / X4 Pro\n\n"
         f"Mode: {mode}\n"
         "Copy the enclosed .sleep folder to the root of the SD card.\n"
         "Do not merge this pack with the other mode's pack.\n"
-        "See the repository README for complete instructions.\n"
-        "Creator and source attribution are included in CREDITS.txt.\n"
+        "\nMade by My Latest Work: https://mylatestwork.net/\n"
+        "Includes adapted Counterfeit Shapes, Symbols & Icons Vol. 1 and Vol. 2.\n"
+        "Artwork license: CC BY 4.0.\n"
     )
     with zipfile.ZipFile(destination, "w") as archive:
         zip_text(archive, "INSTALL.txt", install)
-        zip_entry(archive, ROOT / "CREDITS.txt", "CREDITS.txt")
         zip_entry(archive, ROOT / "LICENSE-ASSETS", "LICENSE-ASSETS.txt")
         for source in sorted(source_dir.iterdir()):
             if source.is_file():
@@ -273,9 +273,6 @@ def main() -> int:
                 f"OK: {sum(item.mode == 'custom' for item in assets)} "
                 "balanced numbered entries per mode"
             )
-            nonpreferred = [item for item in assets if item.mode == "custom" and not item.detail.startswith("24-bit")]
-            for item in nonpreferred:
-                print(f"NOTE: {item.name} is valid but uses {item.detail}; 24-bit is preferred")
         else:
             assets, archives = build()
             print(f"Validated {len(assets)} assets")
