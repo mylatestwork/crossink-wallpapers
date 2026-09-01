@@ -1,6 +1,8 @@
 # CrossInk Wallpapers
 
-![CrossInk Wallpapers — a small collection made for quiet pages.](site/media/social-preview.png)
+**[Open the gallery →](https://mylatestwork.github.io/crossink-wallpapers/)**
+
+![CrossInk Wallpapers — Sleep screens and Page Overlays.](site/media/social-preview.png)
 
 I made this small collection for the quiet moment after the last page.
 
@@ -9,6 +11,10 @@ Twelve minimal symbols, prepared for CrossInk in two formats: full-screen Custom
 Browse every design in the lightweight gallery, or download a ready-to-copy ZIP and go straight back to reading.
 
 Made by [My Latest Work](https://mylatestwork.net/).
+
+<p align="center">
+  <img src="site/media/x4pro-smile.jpg" alt="Smile Page Overlay shown on an Xteink X4 Pro" width="620">
+</p>
 
 Final transparent Custom PNG masters are preserved in [`source/custom-png`](source/custom-png); the published Custom files are flattened onto white and exported as uncompressed 24-bit BMPs.
 
