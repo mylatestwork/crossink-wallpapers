@@ -12,16 +12,19 @@ Simple Custom wallpapers and transparent Page Overlays made for CrossInk on the 
 
 ## Install
 
-The latest release contains two ready-to-copy ZIPs:
+The latest release contains two ready-to-copy ZIPs. Use either pack on its own or combine both:
 
 - **Custom** — crisp, space-saving 1-bit BMP wallpapers
 - **Page Overlay** — transparent PNG symbols shown over the last page
 
-1. Download and extract one pack.
-2. Copy its `.sleep` folder to the root of the SD card.
-3. Choose the matching mode in **Settings → Display → Sleep Screen**.
+1. Download and extract one or both packs.
+2. If using both, merge the contents of their `.sleep` folders.
+3. Copy `.sleep` to the root of the SD card.
+4. Choose **Custom** or **Page Overlay** in **Settings → Display → Sleep Screen**.
 
-Both modes use the same `.sleep` folder, so do not merge the ZIPs. To keep both packs on one card, place them in separate folders and select the preferred sleep-image folder in CrossInk.
+Custom mode uses the BMP files and ignores PNGs. Page Overlay mode can randomly select both PNG and BMP files, so a mixed `.sleep` folder works for both modes.
+
+The dot makes `.sleep` hidden in macOS Finder; press <kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>.</kbd> to show hidden files. Windows normally shows the folder; if it does not, choose **View → Show → Hidden items** in File Explorer.
 
 ## Credits
 

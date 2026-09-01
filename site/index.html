@@ -78,7 +78,7 @@
             <p class="kicker">Wallpaper library</p>
             <h2 id="collection-title">Collections</h2>
           </div>
-          <p id="collection-summary">Custom sleep screens and Page Overlays are packaged separately.</p>
+          <p id="collection-summary">Custom wallpapers and Page Overlays can be used separately or together.</p>
         </div>
         <div id="pack-list" class="pack-list" aria-live="polite"></div>
       </section>
@@ -114,18 +114,18 @@
             <p class="kicker">From ZIP to reader</p>
             <h2 id="install-title">Four steps. No tools.</h2>
           </div>
-          <p>Each download already contains the correctly named <code>.sleep</code> folder for the root of your SD card.</p>
+          <p>Each download contains a ready-to-copy <code>.sleep</code> folder. Use one pack or combine both.</p>
         </div>
         <ol class="install-steps">
           <li>
             <span>01</span>
-            <h3>Choose a mode</h3>
-            <p>Download either the Custom ZIP or the Page Overlay ZIP.</p>
+            <h3>Choose your packs</h3>
+            <p>Download Custom, Page Overlay, or both ZIPs.</p>
           </li>
           <li>
             <span>02</span>
-            <h3>Extract the ZIP</h3>
-            <p>Inside is one ready-to-copy <code>.sleep</code> directory.</p>
+            <h3>Extract &amp; combine</h3>
+            <p>When using both, merge the contents of their <code>.sleep</code> folders.</p>
           </li>
           <li>
             <span>03</span>
@@ -135,12 +135,15 @@
           <li>
             <span>04</span>
             <h3>Select in CrossInk</h3>
-            <p>Open Settings → Display → Sleep Screen and choose the matching mode.</p>
+            <p>Open Settings → Display → Sleep Screen and choose Custom or Page Overlay.</p>
           </li>
         </ol>
         <aside class="install-warning">
           <span aria-hidden="true">!</span>
-          <p><strong>Compatibility works one way.</strong> Custom BMPs can also be used in Page Overlay mode, but transparent Overlay PNGs do not work in Custom mode. Both modes use the same folder, so do not merge the two ZIPs.</p>
+          <div>
+            <p><strong>Mixing works.</strong> Custom mode uses BMPs and ignores PNGs. Page Overlay mode can randomly select both formats, so one mixed <code>.sleep</code> folder works for both.</p>
+            <p><strong>Hidden folder.</strong> On macOS, press Command + Shift + . in Finder. Windows normally shows <code>.sleep</code>; if not, choose View → Show → Hidden items.</p>
+          </div>
         </aside>
       </section>
 

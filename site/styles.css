@@ -721,6 +721,10 @@ h2 {
   line-height: 1.55;
 }
 
+.install-warning p + p {
+  margin-top: 8px;
+}
+
 .install-warning strong {
   color: var(--ink);
 }
