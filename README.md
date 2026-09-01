@@ -28,7 +28,7 @@ The dot makes `.sleep` hidden in macOS Finder; press <kbd>Command</kbd> + <kbd>S
 
 ## Credits
 
-Made by [My Latest Work](https://mylatestwork.net/), using selected shapes adapted from Counterfeit’s [Shapes, Symbols & Icons Vol. 1](https://www.figma.com/community/file/1219674796615198415/shapes-symbols-icons-vol-1) and [Vol. 2](https://www.figma.com/community/file/1446631459390076153/shapes-symbols-icons-vol-2).
+Made by [mylatestwork](https://mylatestwork.net/), using some selected shapes adapted from Counterfeit’s [Shapes, Symbols & Icons Vol. 1](https://www.figma.com/community/file/1219674796615198415/shapes-symbols-icons-vol-1) and [Vol. 2](https://www.figma.com/community/file/1446631459390076153/shapes-symbols-icons-vol-2).
 
 Artwork is licensed under [CC BY 4.0](LICENSE-ASSETS); code is licensed under the [MIT License](LICENSE-CODE). CrossInk and its logo belong to the CrossInk project.
 
