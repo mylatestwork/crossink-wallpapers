@@ -4,9 +4,9 @@
 
 ![CrossInk Wallpapers — Sleep screens and Page Overlays.](site/media/social-preview.png)
 
-I made this small collection for the quiet moment after the last page.
+I’m building this growing collection for the quiet moment after the last page.
 
-Twelve minimal symbols, prepared for CrossInk in two formats: full-screen Custom sleep screens and transparent Page Overlays. Both fit the Xteink X4 and X4 Pro at their native **480 × 800 px** resolution.
+Simple, useful symbols prepared for CrossInk in two formats: full-screen Custom sleep screens and transparent Page Overlays. Both fit the Xteink X4 and X4 Pro at their native **480 × 800 px** resolution.
 
 Browse every design in the lightweight gallery, or download a ready-to-copy ZIP and go straight back to reading.
 
