@@ -7,7 +7,7 @@
 Simple Custom wallpapers and transparent Page Overlays made for CrossInk on the Xteink X4 and X4 Pro. Every file is prepared at the native **480 × 800 px** resolution.
 
 <p align="center">
-  <img src="site/media/x4pro-smile.jpg" alt="Smile Page Overlay on an Xteink X4 Pro" width="620">
+  <img src="site/media/x4pro-smile.jpg" alt="Smile Page Overlay on an Xteink X4 Pro" width="100%">
 </p>
 
 ## Install
