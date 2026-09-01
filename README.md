@@ -1,6 +1,6 @@
 # CrossInk Wallpapers
 
-**[Open the gallery →](https://mylatestwork.github.io/crossink-wallpapers/)** · **[Download the latest packs →](https://github.com/mylatestwork/crossink-wallpapers/releases/latest)**
+**[Open the gallery →](https://mylatestwork.github.io/crossink-wallpapers/)** · **[Download the latest packs →](https://github.com/mylatestwork/crossink-wallpapers/releases/latest)** · **[Support on Ko-fi →](https://ko-fi.com/mylatestwork)**
 
 ![CrossInk Wallpapers](site/media/social-preview-overlay.png)
 
@@ -30,4 +30,6 @@ The dot makes `.sleep` hidden in macOS Finder; press <kbd>Command</kbd> + <kbd>S
 
 Made by [My Latest Work](https://mylatestwork.net/), using selected shapes adapted from Counterfeit’s [Shapes, Symbols & Icons Vol. 1](https://www.figma.com/community/file/1219674796615198415/shapes-symbols-icons-vol-1) and [Vol. 2](https://www.figma.com/community/file/1446631459390076153/shapes-symbols-icons-vol-2).
 
-Artwork is licensed under [CC BY 4.0](LICENSE-ASSETS); code is licensed under the [MIT License](LICENSE-CODE). CrossInk and its logo belong to the CrossInk project. This is an unofficial community collection.
+Artwork is licensed under [CC BY 4.0](LICENSE-ASSETS); code is licensed under the [MIT License](LICENSE-CODE). CrossInk and its logo belong to the CrossInk project.
+
+Made with ♥ by [mylatestwork](https://mylatestwork.net/) · not affiliated with Xteink.
